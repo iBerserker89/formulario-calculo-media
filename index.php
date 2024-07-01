@@ -23,6 +23,13 @@ require_once 'function/retorna-mensagem.inc.php';
         <li>Nota 4 = Peso 4</li>
     </ul>
     <hr>
+    <h3>O aluno será aprovado nos seguintes casos:</h3>
+    <ul>
+        <li>Média >= 7</li>
+        <li>Média >= 6 e Nota 4 >= 8</li>
+        <li>Média >= 5 e Média das Notas 3 e 4 (Mantendo os pesos) >= 8</li>
+    </ul>
+    <hr>
     <form method="POST" action="index.php">
         <div>
             <label for="nota1">Digite a primeira nota:</label>
