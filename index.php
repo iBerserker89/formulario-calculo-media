@@ -1,5 +1,5 @@
 <?php
-require_once 'calcula-nota.inc.php';
+require_once 'function/calcula-nota.inc.php';
 ?>
 
 

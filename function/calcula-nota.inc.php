@@ -20,7 +20,6 @@ if (isset($_POST['nota1'])) {
         return $somaResultado / $somaPesos;
     }
     $media = calcula_media($nota1, $nota2, $nota3, $nota4);
-
 }
 
 
