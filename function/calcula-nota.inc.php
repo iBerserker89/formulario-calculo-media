@@ -1,5 +1,5 @@
 <?php
-
+require_once 'retorna-mensagem.inc.php';
 
 if (isset($_POST['nota1'])) {
     $nota1 = $_POST['nota1'];
@@ -19,10 +19,11 @@ if (isset($_POST['nota1'])) {
 
         return $somaResultado / $somaPesos;
     }
+
     $media = calcula_media($nota1, $nota2, $nota3, $nota4);
 }
 
 
-
+$mensagem_aprovacao = retorna_aprovacao($media);
 
 

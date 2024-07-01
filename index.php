@@ -1,5 +1,6 @@
 <?php
 require_once 'function/calcula-nota.inc.php';
+require_once 'function/retorna-mensagem.inc.php';
 ?>
 
 
@@ -14,7 +15,7 @@ require_once 'function/calcula-nota.inc.php';
 </head>
 <body>
     <h1>Formulário para Cálculo de Média do Aluno</h1>
-    <p>Insita as notas no formulário abaixo. O resultado será a média de todas as notas levando em consideração os seguintes pesos:</p>
+    <p>Insira as notas no formulário abaixo. O resultado será a média de todas as notas levando em consideração os seguintes pesos:</p>
     <ul>
         <li>Nota 1 = Peso 1</li>
         <li>Nota 2 = Peso 2</li>
@@ -55,6 +56,8 @@ require_once 'function/calcula-nota.inc.php';
     <hr>
     <div>
         <span>Resultado: <?php print $media; ?></span>
+        <br>
+        <span>Status: <?php print $mensagem_aprovacao; ?></span>
     </div>
 </body>
 </html>
