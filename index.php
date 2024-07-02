@@ -1,6 +1,5 @@
 <?php
-require_once 'function/calcula-nota.inc.php';
-require_once 'function/retorna-mensagem.inc.php';
+require_once 'function/controlador.inc.php';
 ?>
 
 
@@ -33,38 +32,50 @@ require_once 'function/retorna-mensagem.inc.php';
     <form method="POST" action="index.php">
         <div>
             <label for="nota1">Digite a primeira nota:</label>
-            <input type="number" step="0.1" name="nota1" id="nota1" value="<?php if (isset($nota1)) {
-                echo $nota1;
-            } ?>">
+            <input type="number" step="0.1" name="nota1" id="nota1" value="
+                <?php if (!empty($nota1)) :
+                    echo $nota1;
+                endif; ?>">
         </div>
         <br>
         <div>
             <label for="nota2">Digite a segunda nota:</label>
-            <input type="number" step="0.1" name="nota2" id="nota2" value="<?php if (isset($nota2)) {
-                echo $nota2;
-            } ?>">
+            <input type="number" step="0.1" name="nota2" id="nota2" value="
+                <?php if (!empty($nota2)) :
+                    echo $nota2;
+                endif; ?>">
         </div>
         <br>
         <div>
             <label for="nota3">Digite a terceira nota:</label>
-            <input type="number" step="0.1" name="nota3" id="nota3" value="<?php if (isset($nota3)) {
-                echo $nota3;
-            } ?>">
+            <input type="number" step="0.1" name="nota3" id="nota3" value="
+                <?php if (!empty($nota3)) :
+                    echo $nota3;
+                endif; ?>">
         </div>
         <br>
         <div>
             <label for="nota4">Digite a quarta nota:</label>
-            <input type="number" step="0.1" name="nota4" id="nota4" value="<?php if (isset($nota4)) {
-                echo $nota4;
-            } ?>">
+            <input type="number" step="0.1" name="nota4" id="nota4" value="
+                <?php if (!empty($nota4)) :
+                    echo $nota4;
+                endif; ?>">
         </div>
-        <input type="submit" value="submit">
+        <input type="submit" value="Enviar">
     </form>
     <hr>
     <div>
-        <span>Resultado: <?php print $media; ?></span>
+        <span>Resultado:
+            <?php if (isset($media)):
+                echo $media;
+            endif; ?>
+        </span>
         <br>
-        <span>Status: <?php print $mensagem_aprovacao; ?></span>
+        <span>Status:
+            <?php if (isset($mensagem_aprovacao)):
+                echo $mensagem_aprovacao;
+            endif; ?>
+        </span>
     </div>
 </body>
 </html>
