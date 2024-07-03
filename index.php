@@ -6,7 +6,6 @@ $aviso = '';
 $resultado = false;
 $media = 0;
 
-
 if (empty($_POST['nota1']) && !is_integer($_POST['nota1'])) {
         $aviso .= 'Insira uma nota válida';
     } else {
