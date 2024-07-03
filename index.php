@@ -28,7 +28,7 @@ require_once 'function/controlador.inc.php';
         <li>Média >= 6 e Nota 4 >= 8</li>
         <li>Média >= 5 e Média das Notas 3 e 4 (Mantendo os pesos) >= 8</li>
     </ul>
-    <hr>
+    <hr> 
     <form method="POST" action="index.php">
         <div>
             <label for="nota1">Digite a primeira nota:</label>
