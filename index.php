@@ -7,7 +7,7 @@ $resultado = false;
 $media = 0;
 
 
-if (empty($_POST['nota1']) && !is_numeric($_POST['nota1'])) {
+if (empty($_POST['nota1']) && !is_integer($_POST['nota1'])) {
         $aviso .= 'Insira uma nota válida';
     } else {
         $nota1 = $_POST['nota1'];
@@ -94,11 +94,11 @@ if (empty($_POST['nota1']) && !is_numeric($_POST['nota1'])) {
     </span>
     <br>
     <span>Status:
-        <?php if ($resultado) :
-            echo 'Aluno aprovado'; ?>
-        <?php else :
-            echo 'Aluno reprovado';
-         endif; ?>
+        <?php if ($resultado) : ?>
+           <?php echo 'Aluno aprovado'; ?>
+        <?php else : ?>
+           <?php echo 'Aluno reprovado'; ?>
+        <?php endif; ?>
     </span>
 </div>
 </body>
