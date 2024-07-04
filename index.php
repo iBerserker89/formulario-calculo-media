@@ -6,17 +6,28 @@ $aviso = '';
 $resultado = false;
 $media = 0;
 
-if (empty($_POST['nota1']) && !is_integer($_POST['nota1'])) {
-        $aviso .= 'Insira uma nota válida';
-    } else {
-        $nota1 = $_POST['nota1'];
-        $nota2 = $_POST['nota2'];
-        $nota3 = $_POST['nota3'];
-        $nota4 = $_POST['nota4'];
-
-        $media = calcula_media($nota1, $nota2, $nota3, $nota4);
-        $resultado = retorna_aprovacao($media, $nota3, $nota4);
+if (empty($_POST['nota1']) && !is_numeric($_POST['nota1'])) {
+    $aviso .= 'Insira uma nota válida';
     }
+if (empty($_POST['nota2']) && !is_numeric($_POST['nota2'])) {
+    $aviso .= 'Insira uma nota válida';
+}
+if (empty($_POST['nota3']) && !is_numeric($_POST['nota3'])) {
+    $aviso .= 'Insira uma nota válida';
+}
+if (empty($_POST['nota4']) && !is_numeric($_POST['nota4'])) {
+    $aviso .= 'Insira uma nota válida';
+}
+
+
+if (empty($aviso)) {
+    $nota1 = $_POST['nota1'];
+    $nota2 = $_POST['nota2'];
+    $nota3 = $_POST['nota3'];
+    $nota4 = $_POST['nota4'];
+    $media = calcula_media($nota1, $nota2, $nota3, $nota4);
+    $resultado = retorna_aprovacao($media, $nota3, $nota4);
+}
 
 ?>
 
